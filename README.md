@@ -14,6 +14,7 @@
 |  |
 | ------- |
 | [0217-contains-duplicate](https://github.com/Sipty/DSA/tree/master/0217-contains-duplicate) |
+| [0266-palindrome-permutation](https://github.com/Sipty/DSA/tree/master/0266-palindrome-permutation) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/Sipty/DSA/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 ## Stack
 |  |
@@ -33,4 +34,12 @@
 |  |
 | ------- |
 | [0217-contains-duplicate](https://github.com/Sipty/DSA/tree/master/0217-contains-duplicate) |
+## String
+|  |
+| ------- |
+| [0266-palindrome-permutation](https://github.com/Sipty/DSA/tree/master/0266-palindrome-permutation) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0266-palindrome-permutation](https://github.com/Sipty/DSA/tree/master/0266-palindrome-permutation) |
 <!---LeetCode Topics End-->
