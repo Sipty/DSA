@@ -1,52 +1,31 @@
 class Solution:
-    def isPalindrome(self, s: str) -> str:
-
-        for i in range(len(s)//2):
-            if s[i] != s[len(s)-i-1]:
-                return False
-        
-        return True
-
-
     def longestPalindrome(self, s: str) -> str:
-        l = len(s)
-
-        if l <= 1:
+        
+        if len(s) < 2:
             return s
 
-        while l > 0:
+        longest, wl, wr = 0, 0, 0
+
+        for i in range(len(s)):
             
-            left, right = 0, l-1
+            left, right = i-1, i+1
+            
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                if right-left > longest:
+                    wl, wr = left, right
+                    longest += 1
 
-            while right < len(s):
+                left -= 1
+                right += 1
+            
+            left, right = i, i+1
+            
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                if right-left > longest:
+                    wl, wr = left, right
+                    longest += 1
 
-                if self.isPalindrome(s[left:right+1]):
-                    return s[left:right+1]
-                else:
-                    left += 1
-                    right += 1
-
-
-            l -= 1
-
-
-
+                left -= 1
+                right += 1
         
-        return s
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return s[wl:wr+1]
