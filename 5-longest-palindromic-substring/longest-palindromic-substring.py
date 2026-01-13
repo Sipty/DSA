@@ -9,24 +9,44 @@ class Solution:
 
 
     def longestPalindrome(self, s: str) -> str:
+        l = len(s)
 
-        # basic idea:
-        # two pointer, check isPalindrome at each step. 
-        # first match - return :)  
-
-        if len(s) == 1:
+        if l <= 1:
             return s
 
-        longest = ""
-
-        for length in range(len(s), 0, -1):
-            for i in range(len(s) - length + 1):
-                j = i + length
-                if self.isPalindrome(s[i:j]):
-                    if len(longest) < len(s[i:j]):
-                        longest = s[i:j]
+        while l > 0:
             
-            if longest != "":
-                return longest
+            left, right = 0, l-1
+
+            while right < len(s):
+
+                if self.isPalindrome(s[left:right+1]):
+                    return s[left:right+1]
+                else:
+                    left += 1
+                    right += 1
+
+
+            l -= 1
+
+
+
         
-        return longest
+        return s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
