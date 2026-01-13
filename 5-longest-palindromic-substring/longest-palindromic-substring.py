@@ -8,6 +8,7 @@ class Solution:
 
         for i in range(len(s)):
             
+            # handle uneven length palindromes
             left, right = i-1, i+1
             
             while left >= 0 and right < len(s) and s[left] == s[right]:
@@ -18,6 +19,7 @@ class Solution:
                 left -= 1
                 right += 1
             
+            # handle even length palindromes
             left, right = i, i+1
             
             while left >= 0 and right < len(s) and s[left] == s[right]:
