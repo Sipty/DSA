@@ -15,7 +15,7 @@ class Solution:
                     if ans == []:
                         ans.append(newInterval)
                     elif ans[-1][1] >= newInterval[0]:
-                        ans.append(self.merge(ans[-1], newInterval))
+                        ans[-1] = self.merge(ans[-1], newInterval)
                     else:
                         ans.append(newInterval)
                     
@@ -33,7 +33,7 @@ class Solution:
                 if ans == []:
                     ans.append(interval)
                 elif ans[-1][1] >= interval[0]:
-                    ans.append(self.merge(ans[-1]), interval)
+                    ans[-1] = self.merge(ans[-1]), interval
                 else:
                     ans.append(interval)
 
@@ -44,7 +44,7 @@ class Solution:
                 if ans == []:
                     ans.append(interval)
                 elif ans[-1][1] >= interval[0]:
-                    ans.append(self.merge(ans[-1], interval))
+                    ans[-1] = self.merge(ans[-1]), interval
                 else:
                     ans.append(interval)
                 
@@ -54,7 +54,7 @@ class Solution:
             if ans == []:
                 ans.append(newInterval)
             elif ans[-1][1] >= newInterval[0]:
-                ans.append(self.merge(ans[-1], newInterval))
+                ans[-1] = self.merge(ans[-1]), interval
             else:
                 ans.append(newInterval)
 
